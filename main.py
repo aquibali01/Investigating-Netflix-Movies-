@@ -34,16 +34,16 @@ action_movies_1990s = movies_1990s[movies_1990s["genre"] == "Action"]
 # Use a for loop and a counter to count how many short action movies there were in the 1990s
 
 # Start the counter
-# short_movie_count = 0
+short_movie_count = 0
 
 # # Iterate over the labels and rows of the DataFrame and check if the duration is less than 90, if it is, add 1 to the counter, if it isn't, the counter should remain the same
-# for label, row in action_movies_1990s.iterrows() :
-#     if row["duration"] < 90 :
-#         short_movie_count = short_movie_count + 1
-#     else:
-#         short_movie_count = short_movie_count
+for label, row in action_movies_1990s.iterrows() :
+    if row["duration"] < 90 :
+        short_movie_count = short_movie_count + 1
+    else:
+        short_movie_count = short_movie_count
 
-# print(short_movie_count)
+print(f"There were around {short_movie_count} short form action movies in 90's")
 
 # A quicker way of counting values in a column is to use .sum() on the desired column
-(action_movies_1990s["duration"] < 90).sum()
+# print((action_movies_1990s["duration"] < 90).sum())
